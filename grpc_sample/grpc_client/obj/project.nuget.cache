@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wea/QSwTzu1ox0iMq6n1iyJMbG87/zcfzE4JCv51/vrioJcArvw3un5DBLurZIi6hF3TcG1xbMhh7/5M/e9Hdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Linux2000\\Documents\\GitHub\\grpc_client_server_sample\\grpc_sample\\grpc_client\\grpc_client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Linux2000\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.0-preview.7.23375.6\\microsoft.dotnet.ilcompiler.8.0.0-preview.7.23375.6.nupkg.sha512",
+    "C:\\Users\\Linux2000\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0-preview.7.23375.6\\microsoft.net.illink.tasks.8.0.0-preview.7.23375.6.nupkg.sha512",
+    "C:\\Users\\Linux2000\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.0-preview.7.23375.6\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.0-preview.7.23375.6.nupkg.sha512"
+  ],
+  "logs": []
+}
