@@ -10,7 +10,8 @@ public class HelloServiceImpl : HelloServiceBase
         Hellorequest request,
         ServerCallContext context)
     {
-        var message = $"Hello {request.FirstName} {request.LastName}!";
+        var message = $"Hello {request.FirstName} {request.LastName} and children " +
+            $"{string.Join(',',request.Children.Select(c=>c.FirstName))}!";
         return Task.FromResult( new HelloResponse { Message = message }); 
     }
 }

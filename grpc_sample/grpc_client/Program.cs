@@ -7,32 +7,42 @@ try
    await channel.ConnectAsync();
    Console.WriteLine("Successfully connected  to the server !");
 
-    //var client = new HelloService.HelloServiceClient(channel);
-    //var response = await client.WelcomeAsync(new Hellorequest {
-    //    FirstName="Linux",
-    //    LastName="2000" 
-    //});
-    
+    var client = new HelloService.HelloServiceClient(channel);
 
-    Console.WriteLine("First name?");
-    var name = Console.ReadLine();
-
-    Console.WriteLine("Last name? ");
-    var lastName = Console.ReadLine();
-
-    var request = new CreatePersonRequest
+    var request = new Hellorequest
     {
-        FirstName= name,
-        LastName= lastName
+        FirstName="Linux",
+        LastName="2000",
     };
+    request.Children.AddRange(new[]
+    {
+        new Child {FirstName="Lux"},
+        new Child {FirstName="Chloé"}
+    });
 
-    var client = new PeopleService.PeopleServiceClient(channel);
+    var response = await client.WelcomeAsync(request);
 
-    var response = await client.CreatePersonAsync(request); 
+    Console.WriteLine(response.Message);
+
+    //Console.WriteLine("First name?");
+    //var name = Console.ReadLine();
+
+    //Console.WriteLine("Last name? ");
+    //var lastName = Console.ReadLine();
+
+    //var request = new CreatePersonRequest
+    //{
+    //    FirstName= name,
+    //    LastName= lastName
+    //};
+
+    //var client = new PeopleService.PeopleServiceClient(channel);
+
+    //var response = await client.CreatePersonAsync(request); 
 
 
 
-    Console.WriteLine($"{response.FirstName} {response.LastName} has been created" + $"on the server! (id={response.Id})");
+    //Console.WriteLine($"{response.FirstName} {response.LastName} has been created" + $"on the server! (id={response.Id})");
     Console.ReadLine();
 }
 catch(Exception ex)

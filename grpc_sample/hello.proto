@@ -1,8 +1,13 @@
 syntax ="proto3";
 
+message Child{
+	string firstName=1;
+}
+
 message Hellorequest{
 	string firstName=1;
 	string lastName=2;
+	repeated Child children =3;
 }
 
 message HelloResponse{
