@@ -1,9 +1,10 @@
 ﻿using Grpc.Core;
+using grpc_server.Services;
 
 Server server = new Server()
 {
     Ports = { new ServerPort("localhost", 7777, ServerCredentials.Insecure) },
-    Services = { }
+    Services = { HelloService.BindService(new HelloServiceImpl()) }
 };
 
 try
