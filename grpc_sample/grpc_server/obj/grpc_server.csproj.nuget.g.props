@@ -17,6 +17,7 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.0-preview.7.23375.6\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.0-preview.7.23375.6\build\Microsoft.NET.ILLink.Tasks.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.10\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.10\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.dotnet.ilcompiler\8.0.0-preview.7.23375.6\build\Microsoft.DotNet.ILCompiler.props" Condition="Exists('$(NuGetPackageRoot)microsoft.dotnet.ilcompiler\8.0.0-preview.7.23375.6\build\Microsoft.DotNet.ILCompiler.props')" />
     <Import Project="$(NuGetPackageRoot)grpc.tools\2.46.6\build\Grpc.Tools.props" Condition="Exists('$(NuGetPackageRoot)grpc.tools\2.46.6\build\Grpc.Tools.props')" />
   </ImportGroup>

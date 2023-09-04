@@ -1,24 +1,43 @@
 ﻿using Grpc.Core;
 
-Channel channel = new Channel("localhost:7777", ChannelCredentials.Insecure);
+Channel channel = new Channel("localhost:5099", ChannelCredentials.Insecure);
 
 try
 {
    await channel.ConnectAsync();
-   Console.WriteLine("The client connected successfully  to the server");
+   Console.WriteLine("Successfully connected  to the server !");
 
-    var client = new HelloService.HelloServiceClient(channel);
-    var response = await client.WelcomeAsync(new Hellorequest {
-        FirstName="Linux",
-        LastName="2000" 
-    });
+    //var client = new HelloService.HelloServiceClient(channel);
+    //var response = await client.WelcomeAsync(new Hellorequest {
+    //    FirstName="Linux",
+    //    LastName="2000" 
+    //});
     
-    Console.WriteLine(response.Message);
+
+    Console.WriteLine("First name?");
+    var name = Console.ReadLine();
+
+    Console.WriteLine("Last name? ");
+    var lastName = Console.ReadLine();
+
+    var request = new CreatePersonRequest
+    {
+        FirstName= name,
+        LastName= lastName
+    };
+
+    var client = new PeopleService.PeopleServiceClient(channel);
+
+    var response = await client.CreatePersonAsync(request); 
+
+
+
+    Console.WriteLine($"{response.FirstName} {response.LastName} has been created" + $"on the server! (id={response.Id})");
     Console.ReadLine();
 }
 catch(Exception ex)
 {
-    Console.WriteLine("An error has been thrown : " + ex);
+    Console.WriteLine("An error occured : " + ex);
 }
 finally
 {
