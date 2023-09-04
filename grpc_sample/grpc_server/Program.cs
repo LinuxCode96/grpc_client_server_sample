@@ -1,6 +1,7 @@
 ﻿using Grpc.Core;
 using grpc_server.Services;
 
+// Grpc Services
 Server server = new Server()
 {
     Ports = { new ServerPort("localhost", 7777, ServerCredentials.Insecure) },

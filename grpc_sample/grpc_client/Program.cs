@@ -6,7 +6,15 @@ try
 {
    await channel.ConnectAsync();
    Console.WriteLine("The client connected successfully  to the server");
-   Console.ReadLine();
+
+    var client = new HelloService.HelloServiceClient(channel);
+    var response = await client.WelcomeAsync(new Hellorequest {
+        FirstName="Linux",
+        LastName="2000" 
+    });
+    
+    Console.WriteLine(response.Message);
+    Console.ReadLine();
 }
 catch(Exception ex)
 {

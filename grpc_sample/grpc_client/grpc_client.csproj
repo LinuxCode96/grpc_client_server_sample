@@ -26,7 +26,7 @@
   <ItemGroup>
 		<!-- This ensures that all .proto files in ../protos/ are considered by the protobuf compiler.
          The output will be placed in a directory gRPC_Objects under the relative path of the .proto file. -->
-	  <Protobuf Include="../*.proto" OutputDir="gRPC_Objects/" GrpcServices="Server" />
+	  <Protobuf Include="../*.proto" OutputDir="gRPC_Objects/" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>

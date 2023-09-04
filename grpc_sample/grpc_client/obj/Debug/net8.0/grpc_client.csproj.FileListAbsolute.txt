@@ -22,3 +22,4 @@ C:\Users\Linux2000\Documents\GitHub\grpc_client_server_sample\grpc_sample\grpc_c
 C:\Users\Linux2000\Documents\GitHub\grpc_client_server_sample\grpc_sample\grpc_client\obj\Debug\net8.0\grpc_client.pdb
 C:\Users\Linux2000\Documents\GitHub\grpc_client_server_sample\grpc_sample\grpc_client\obj\Debug\net8.0\grpc_client.genruntimeconfig.cache
 C:\Users\Linux2000\Documents\GitHub\grpc_client_server_sample\grpc_sample\grpc_client\obj\Debug\net8.0\ref\grpc_client.dll
+C:\Users\Linux2000\Documents\GitHub\grpc_client_server_sample\grpc_sample\grpc_client\obj\Debug\net8.0\grpc_client.sourcelink.json
